@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>rbenv - Ansible Role by pablocrivella</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">rbenv - Ansible Role</h1>
+      <h2 class="project-tagline">Ansible Role for installing rbenv and multiple ruby versions.</h2>
+      <a href="https://github.com/pablocrivella/ansible-role-rbenv" class="btn">View on GitHub</a>
+      <a href="https://github.com/pablocrivella/ansible-role-rbenv/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/pablocrivella/ansible-role-rbenv/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="ansible-role-rbenv" class="anchor" href="#ansible-role-rbenv" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ansible Role: Rbenv</h1>
+
+<p><a href="http://travis-ci.org/pablocrivella/ansible-role-rbenv"><img src="http://img.shields.io/travis/pablocrivella/ansible-role-rbenv.svg?style=flat" alt="Build
+ Status"></a>
+<a href="https://galaxy.ansible.com/list#/roles/2332"><img src="http://img.shields.io/badge/galaxy-pablocrivella.rbenv-660198.svg?style=flat" alt="Ansible
+Galaxy"></a></p>
+
+<p>Role to install rbenv and multiple ruby versions.</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>Tested with Ansible 1.8.4.</p>
+
+<h2>
+<a id="role-variables" class="anchor" href="#role-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Role Variables</h2>
+
+<div class="highlight highlight-source-yaml"><pre><span class="pl-s">-<span class="pl-s">--</span></span>
+<span class="pl-c"># This could be set to 'user' to support user installs.</span>
+<span class="pl-s"><span class="pl-ent">rbenv_env:</span> <span class="pl-s">system</span></span>
+
+<span class="pl-s"><span class="pl-ent">rbenv_version:</span> <span class="pl-s">v0.4.0</span></span>
+
+<span class="pl-c"># This sets the rbenv global ruby version.</span>
+<span class="pl-s"><span class="pl-ent">rbenv_global:</span> <span class="pl-s">2.2.3</span></span>
+
+<span class="pl-c"># List of ruby versions to install.</span>
+<span class="pl-s"><span class="pl-ent">rbenv_rubies:</span></span>
+  <span class="pl-s">- <span class="pl-s">2.2.3</span></span>
+
+<span class="pl-c"># List of defaults gem to install on each ruby version.</span>
+<span class="pl-s"><span class="pl-ent">rbenv_default_gems:</span></span>
+  <span class="pl-s">- <span class="pl-s">bundler</span></span>
+
+<span class="pl-c"># List of users to install rbenv and ruby versions to.</span>
+<span class="pl-c"># Ignored if rbenv_env is set to 'system'</span>
+<span class="pl-s"><span class="pl-ent">rbenv_users:</span> <span class="pl-s">[]</span></span>
+
+<span class="pl-c"># Example:</span>
+<span class="pl-c"># rbenv_users: []</span>
+<span class="pl-c">#   - user1</span>
+<span class="pl-c">#   - user2</span></pre></div>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<ul>
+<li>ANXS.git</li>
+<li>ANXS.build-essential</li>
+</ul>
+
+<h2>
+<a id="example-playbook" class="anchor" href="#example-playbook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Playbook</h2>
+
+<div class="highlight highlight-source-yaml"><pre><span class="pl-s">- <span class="pl-ent">hosts:</span> <span class="pl-s">ruby-devbox</span></span>
+  <span class="pl-s"><span class="pl-ent">roles:</span></span>
+    <span class="pl-s">- <span class="pl-s">pablocrivella.rbenv</span></span></pre></div>
+
+<p>For a more detailed example check this <a href="https://github.com/pablocrivella/apps-forge/blob/master/provisioning/ruby.yml">Playbook</a>.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+
+<h2>
+<a id="author-information" class="anchor" href="#author-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author Information</h2>
+
+<p>Pablo Crivella Backend Engineer @ NobelBiz.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/pablocrivella/ansible-role-rbenv">rbenv - Ansible Role</a> is maintained by <a href="https://github.com/pablocrivella">pablocrivella</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
