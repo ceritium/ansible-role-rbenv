@@ -49,12 +49,12 @@ rbenv_users: []
 ## Example Playbook
 
 ```yaml
-- hosts: ruby-devbox
+- hosts: ruby
   roles:
     - pablocrivella.rbenv
 ```
 
-For a more detailed example check this [Playbook](https://github.com/pablocrivella/apps-forge/blob/master/provisioning/ruby.yml).
+For a more detailed example check this [Playbook](https://github.com/pablocrivella/apps-forge/blob/master/provisioning/playbook.yml).
 
 ## License
 
@@ -62,4 +62,4 @@ MIT
 
 ## Author Information
 
-Pablo Crivella Backend Engineer @ NobelBiz.
+Pablo Crivella.

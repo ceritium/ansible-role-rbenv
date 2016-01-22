@@ -2,7 +2,6 @@
 galaxy_info:
   author: Pablo Crivella
   description: Role to install rbenv and multiple ruby versions.
-  company: NobelBiz
   license: MIT
   min_ansible_version: 1.2
   platforms:
